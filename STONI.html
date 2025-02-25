@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Воспроизведение звука</title>
+</head>
+<body>
+    <h1>Нажмите кнопку, чтобы воспроизвести звук</h1>
+    <button onclick="playSound()">Воспроизвести звук</button>
+
+    <!-- Элемент для воспроизведения аудио -->
+    <audio id="audioPlayer" src="https://cdn.uwupad.me/9326.mp3"></audio>
+
+    <script>
+        function playSound() {
+            const audioPlayer = document.getElementById("audioPlayer");
+            audioPlayer.volume = 1.0; // Устанавливаем громкость на максимум
+            audioPlayer.play(); // Воспроизводим звук
+        }
+    </script>
+</body>
+</html>
