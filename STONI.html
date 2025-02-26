@@ -3,21 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Воспроизведение звука</title>
+    <title>Синяя кнопка со звуком</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .button {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 100px;
+            cursor: pointer;
+            user-select: none;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: darkblue;
+        }
+    </style>
 </head>
 <body>
-    <h1>Нажмите кнопку, чтобы воспроизвести звук</h1>
-    <button onclick="playSound()">Воспроизвести звук</button>
 
-    <!-- Элемент для воспроизведения аудио -->
-    <audio id="audioPlayer" src="https://cdn.uwupad.me/9326.mp3"></audio>
+    <div class="button" onclick="playSound()">!</div>
 
     <script>
         function playSound() {
-            const audioPlayer = document.getElementById("audioPlayer");
-            audioPlayer.volume = 1.0; // Устанавливаем громкость на максимум
-            audioPlayer.play(); // Воспроизводим звук
+            const audio = new Audio('https://cdn.uwupad.me/30339.mp3');
+            audio.play();
         }
     </script>
+
 </body>
 </html>
